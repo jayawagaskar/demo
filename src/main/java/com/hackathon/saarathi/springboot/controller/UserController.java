@@ -53,7 +53,7 @@ public class UserController {
 	}
 	
 
-	@PostMapping(value = "/getAllUsers")
+	@PostMapping(value = "/createUser")
 	public @ResponseBody String createUser() {
 
 		User user = new User();
@@ -72,7 +72,7 @@ public class UserController {
 		return "user created  with id"+r.getId();
 	}
 	
-	@GetMapping(value = "/getAllUsers")
+	/*@GetMapping(value = "/getAllUsers")
 	public @ResponseBody List getAll(@RequestParam(required = false) Long userId) {
 		// Get all documents from socialreviewdb
 		List allDocs = null;
@@ -93,35 +93,5 @@ public class UserController {
 			System.out.println("Exception thrown : " + e.getMessage());
 		}
 		return allDocs;
-	}
-
-	/*@GetMapping(value = "/getUsersByCategory")
-	public List<User> getUsersByCategory(@RequestParam String category) {
-		return userService.getUsersByCategory(category);
-	
-	}
-	
-	@PostMapping(value = "/createUser")
-	public void createUser(@RequestBody User emp) {
-		 userService.insertUser(emp);
-	
-	}
-	@PutMapping(value = "/updateUser")
-	public void updateUser(@RequestBody User emp) {
-		 userService.updateUser(emp);
-	
-	}
-	@PutMapping(value = "/executeUpdateUser")
-	public void executeUpdateUser(@RequestBody User emp) {
-		 userService.executeUpdateUser(emp);
-	
-	}
-	
-	@DeleteMapping(value = "/deleteUserById")
-	public void deleteUser(@RequestBody User emp) {
-		 userService.deleteUser(emp);
-	
-	}
-	*/
-	
+	}*/
 }
